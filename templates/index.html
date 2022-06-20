@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Job_Count</title>
+  </head>
+  <body>
+    <h1>퇴근시간</h1>
+<form action = "{% url 'count' %}" method=POST>
+    {% csrf_token %}
+    <input type=number placeholder="잡수" name="jobs">
+    <input type=number placeholder="시" name="hours">
+    <input type=number placeholder="분" name="minutes">
+    <input type=number placeholder="초" name="seconds">
+    <br>
+    <button type=submit >계산</button>
+</form>
+
+  </body>
+</html>
